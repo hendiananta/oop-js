@@ -9,16 +9,20 @@
     <p id="hasil"></p>
     <p id="hasil2"></p>
     <script>
+        //cara mendefinisikan object
         let orang = {
             namaDepan : "Hendi", 
             namaBelakang : "Hermawan", 
             warnaMata : "biru"
         }
-        orang.kebangsaan = "Indonesia"; //menambah properti
-        delete orang.warnaMata; //menghapus properti
+
+        orang.kebangsaan = "Indonesia"; //menambah properti pd object
+        delete orang.warnaMata; //menghapus properti pd object
         const hasil = document.getElementById("hasil");
+        //cara menampilkan property object
         hasil.innerHTML = "Nama Lengkap : " + orang.namaDepan + " " + orang.namaBelakang + "<br>Warna Mata : " + orang.warnaMata + "<br>Kebangsaan : " + orang.kebangsaan;
 
+        //cara mengakses object via loop
         let pesan = "";
         let id;
         for(id in orang) {
@@ -26,9 +30,13 @@
             console.log("id = " + id);
           //  console.log("orang = ")
         }
-        console.log(orang["namaDepan"])
         const hasil2 = document.getElementById("hasil2");
         hasil2.innerHTML = pesan;
+        
+        //cara lain mengakses property object
+        console.log(orang["namaDepan"])
+
+        
     </script>
 </body>
 </html>
